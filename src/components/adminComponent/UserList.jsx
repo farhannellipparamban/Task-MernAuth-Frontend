@@ -24,7 +24,6 @@ const UserList = () => {
               View accounts of registered users
             </span>
           </div>
-          
         </div>
         <div className="overflow-y-hidden rounded-lg border">
           <div className="overflow-x-auto">
@@ -46,21 +45,18 @@ const UserList = () => {
                       </td>
                       <td className="border-b border-gray-200 bg-gray-300 px-5 py-5 text-sm">
                         <div className="flex items-center">
-                          <div className="h-10 w-10 flex-shrink-0">
-                            <img
-                              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&h=100&q=80"
-                              alt="Profile"
-                              className="h-full w-full rounded-full"
-                            />
+                          <div className="h-10 w-10 flex-shrink-0 bg-gray-600 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-lg">
+                              {data?.name.charAt(0).toUpperCase()}
+                            </span>
                           </div>
-                          <div className="pl-3">
-                            <div className="text-base font-semibold">
-                              {data?.name}
-                            </div>
-                            <div className="font-normal">{data?.email}</div>
+                          <div className="ml-3">
+                            <div className="font-medium">{data?.name}</div>
+                            <div className="text-gray-500">{data?.email}</div>
                           </div>
                         </div>
                       </td>
+
                       <td className="bg-gray-300 border-gray-200 border-b">
                         {data?.phone}
                       </td>
