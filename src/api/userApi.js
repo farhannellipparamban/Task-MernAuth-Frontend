@@ -20,3 +20,14 @@ export const loginVerification = async (loginData) => {
   return data;
 };
 
+export const userForgetPassword = async (userEmail) => {
+  const data = await userAxiosInstance.post("/forgetPassword", { userEmail });
+  return data;
+};
+
+export const userResetPassword = async (id, email, password) => {
+  const data = await userAxiosInstance.put(`/resetPassword/${id}/${email}`, {
+    password,
+  });
+  return data;
+};

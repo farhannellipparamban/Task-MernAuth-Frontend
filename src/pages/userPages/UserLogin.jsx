@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { loginVerification } from '../../api/userApi'
 import { toast } from 'react-toastify'
 import { userLogin } from '../../reduxStore/slices/userSlice'
+import { loginSchema } from '../../validations/user/loginValidation'
 
 const UserLogin = () => {
   const dispatch = useDispatch()
@@ -15,6 +16,7 @@ const UserLogin = () => {
       email:"",
       password:"",
     },
+    validationSchema: loginSchema,
     onSubmit,
   })
 
@@ -125,7 +127,7 @@ const UserLogin = () => {
                   Don't have an account{" "}
                   <Link
                     to="/signup"
-                    className="font-semibold hover:underline ml-1 whitespace-nowrap"
+                    className="text-blue-500 hover:underline ml-1 whitespace-nowrap"
                   >
                     Register here
                   </Link>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { userSignup } from "../../api/userApi";
 import { toast } from "react-toastify";
 import { useFormik } from "formik";
+import { userSchema } from "../../validations/user/SignupValidation";
 
 const UserSignup = () => {
     const navigate = useNavigate()
@@ -31,6 +32,7 @@ const UserSignup = () => {
         password:"",
         cpassword:"",
       },
+      validationSchema: userSchema,
       onSubmit,
     })
   return (
@@ -173,7 +175,7 @@ const UserSignup = () => {
                 <div className="mt-3">
                   <p>
                     Already have an account?{" "}
-                    <Link to="/login" className="text-blue-500">
+                    <Link to="/login" className="text-blue-500 whitespace-nowrap hover:underline">
                       Login
                     </Link>
                   </p>

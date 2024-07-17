@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { otpVerification, resendOtp } from '../../api/userApi'
 import { toast } from 'react-toastify'
 import { useFormik } from 'formik'
+import { otpSchema } from '../../validations/user/otpValidation'
 
 const Otp = () => {
   const location = useLocation()
@@ -60,6 +61,7 @@ const Otp = () => {
       otp3: "",
       otp4: "",
     },
+    validationSchema: otpSchema,
     onSubmit,
   })
 
