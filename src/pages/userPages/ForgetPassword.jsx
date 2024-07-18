@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import * as yup from "yup";
 import { userForgetPassword } from "../../api/userApi";
 import { useFormik } from "formik";
 import Navbar from "../../components/userComponent/Navbar";
