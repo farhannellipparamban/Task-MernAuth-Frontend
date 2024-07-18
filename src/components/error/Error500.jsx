@@ -29,7 +29,7 @@ const Error500 = () => {
     <>
       <div className="flex h-screen items-center justify-center p-5 w-full bg-gray-100">
         <div className="text-center">
-          <div className="inline-flex rounded-full bg-red-400 p-4">
+          <div className="inline-flex rounded-full bg-gray-700 p-4">
             <div className="rounded-full bg-white p-4">
               <FontAwesomeIcon
                 icon={faCircleExclamation}
@@ -37,17 +37,17 @@ const Error500 = () => {
               />
             </div>
           </div>
-          <h1 className="mt-5 text-4xl font-bold text-gray-800 lg:text-6xl">
+          <h1 className="mt-5 text-4xl font-bold text-red-600 lg:text-6xl">
             500 - Server Error
           </h1>
-          <p className="text-gray-600 mt-5 text-lg">
+          <p className="text-red-600 mt-5 text-lg">
             Oops! Something went wrong. Please try refreshing the page or
             <br />
             contact us if the problem persists.
           </p>
           <Link
             to={getHomeUrl()}
-            className="mt-8 bg-red-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-red-700 inline-block"
+            className="mt-8 bg-gray-700 text-white font-semibold py-2 px-4 rounded-full hover:bg-gray-900 inline-block"
           >
             Go to Home
           </Link>

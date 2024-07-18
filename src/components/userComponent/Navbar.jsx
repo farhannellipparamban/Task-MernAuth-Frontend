@@ -20,17 +20,14 @@ const Navbar = () => {
 
   return (
     <>
-      <Disclosure
-        as="nav"
-        className="bg-gradient-to-r from-gray-900 to-gray-700 shadow-lg"
-      >
+      <Disclosure as="nav" className="bg-white shadow-lg font-serif">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="relative flex items-center justify-between h-16">
+              <div className="relative flex items-center justify-between h-20">
                 {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-500 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-600">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -43,8 +40,13 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0">
-                    <h1 className="text-white text-2xl font-extrabold tracking-wider">
-                      Mern Auth
+                    <h1 className="text-3xl font-extrabold tracking-wider bg-red-600 text-transparent bg-clip-text">
+                      <span className="text-2xl font-semibold text-red-600 -ml-4 font-serif">
+                        Mern
+                        <span className="text-2xl font-semibold text-black">
+                          Auth
+                        </span>
+                      </span>{" "}
                     </h1>
                   </div>
                   {/* Desktop navigation links */}
@@ -60,9 +62,9 @@ const Navbar = () => {
                   {user ? (
                     <Menu as="div" className="ml-3 relative">
                       <div>
-                        <Menu.Button className="flex items-center justify-center rounded-full bg-gray-600 p-1 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-3 focus:ring-offset-gray-900 transition duration-300 ease-in-out transform hover:scale-110">
+                        <Menu.Button className="flex items-center justify-center rounded-full bg-gray-500 p-1 text-sm focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-3 focus:ring-offset-white transition duration-300 ease-in-out transform hover:scale-110">
                           <svg
-                            className="w-7 h-7 text-white"
+                            className="w-8 h-8 text-white"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +79,10 @@ const Navbar = () => {
                       </div>
                       <Transition
                         as={React.Fragment}
-                        enter="transition ease-out duration-100"
+                        enter="transition ease-out duration-200"
                         enterFrom="transform opacity-0 scale-95"
                         enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
+                        leave="transition ease-in duration-150"
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
@@ -127,7 +129,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to="/login"
-                      className="flex items-center justify-center rounded-full bg-gray-600 p-1 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-3 focus:ring-offset-gray-900 transition duration-300 ease-in-out transform hover:scale-110"
+                      className="flex items-center justify-center rounded-full bg-gray-500 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-3 focus:ring-offset-white transition duration-300 ease-in-out transform hover:scale-110"
                     >
                       <svg
                         className="w-7 h-7 text-white"
@@ -158,8 +160,6 @@ const Navbar = () => {
           </>
         )}
       </Disclosure>
-
-    
     </>
   );
 };

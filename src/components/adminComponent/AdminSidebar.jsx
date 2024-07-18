@@ -9,7 +9,7 @@ const AdminSidebar = () => {
   return (
     <div className="w-full sm:w-64 bg-white">
       <div className="h-screen pb-10">
-        <div className="flex flex-col h-full overflow-y-auto rounded-br-lg rounded-tr-lg bg-white">
+        <div className="flex flex-col h-screen overflow-y-auto rounded-br-lg rounded-tr-xl bg-white shadow-lg shadow-gray-400">
           <div className="flex mt-6 flex-1 flex-col">
             <nav className="flex-1">
               <Link
